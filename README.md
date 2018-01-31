@@ -1,4 +1,4 @@
-# mp4 Chrome Extension README
+# MP4 Chrome Extension README
 This is a simple extension that generates a moving image everytime you create a New Tab. 
 
 There is 4 mp4's included in this extension, and it randomly cycles through each when you open a new tab. 
