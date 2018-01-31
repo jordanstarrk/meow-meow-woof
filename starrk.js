@@ -3,7 +3,21 @@ var selectMp4 = [
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"1.mp4\"><source src=\"1.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"2.mp4\"><source src=\"2.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"3.mp4\"><source src=\"3.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"4.mp4\"><source src=\"4.mp4\" type=\"video/mp4\"></video>"
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"4.mp4\"><source src=\"4.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"5.mp4\"><source src=\"5.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"6.mp4\"><source src=\"6.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"7.mp4\"><source src=\"7.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"8.mp4\"><source src=\"8.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"9.mp4\"><source src=\"9.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"10.mp4\"><source src=\"10.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"11.mp4\"><source src=\"11.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"12.mp4\"><source src=\"12.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"13.mp4\"><source src=\"13.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"14.mp4\"><source src=\"14.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"15.mp4\"><source src=\"15.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"16.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"17.mp4\"><source src=\"17.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"18.mp4\"><source src=\"18.mp4\" type=\"video/mp4\"></video>"
 ];
 
 //function to select an mp4 from the SelectMp4 array
