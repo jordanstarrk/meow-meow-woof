@@ -11,6 +11,10 @@
   	"19":"starrk19.png"
   },
 
+  "icons": { "16": "colour16.png",
+           "48": "colour48.png",
+          "128": "colour128.png" },
+
   "browser_action": {
   	"default_icon": "starrk19.png"
   },
