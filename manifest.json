@@ -1,6 +1,6 @@
 {
-  "name": "Aloha: New Tab Manager",
-  "description": "Bring a sense of Aloha to your browser",
+  "name": "Aloha: Your mindful reminder",
+  "description": "Bring a sense of mindfulness to your browsing",
   "version": "0.2",
   "incognito": "split",
   "chrome_url_overrides": {
