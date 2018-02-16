@@ -1,6 +1,6 @@
 {
-  "name": "Aloha: Your mindful reminder everytime you open a new tab",
-  "description": "Bring a sense of mindfulness to your browsing",
+  "name": "Aloha: Be mindful",
+  "description": "Your mindful reminder everytime you open a new tab",
   "version": "0.2",
   "incognito": "split",
   "chrome_url_overrides": {
