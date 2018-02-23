@@ -22,7 +22,7 @@ var selectMp4 = [
 
 //function to select an mp4 from the SelectMp4 array
 var pickAnMp4 = function () {
-var todaysMp4 = selectMp4[Math.floor(Math.random() * 18)];
+var todaysMp4 = selectMp4[Math.floor(Math.random() * 17)];
 return todaysMp4;
 };
 
