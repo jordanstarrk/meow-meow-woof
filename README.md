@@ -1,5 +1,5 @@
 # Aloha README
-Aloha is a designed to be your mindful reminder everytime you open a new tab.
+Replace new tab page with a short video that will melt your heart.
 
 This is a native client application and only works in Chrome web browser.
 

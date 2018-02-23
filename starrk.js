@@ -16,13 +16,11 @@ var selectMp4 = [
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"14.mp4\"><source src=\"14.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"15.mp4\"><source src=\"15.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"16.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"17.mp4\"><source src=\"17.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"18.mp4\"><source src=\"18.mp4\" type=\"video/mp4\"></video>"
 ];
 
 //function to select an mp4 from the SelectMp4 array
 var pickAnMp4 = function () {
-var todaysMp4 = selectMp4[Math.floor(Math.random() * 17)];
+var todaysMp4 = selectMp4[Math.floor(Math.random() * 16)];
 return todaysMp4;
 };
 
