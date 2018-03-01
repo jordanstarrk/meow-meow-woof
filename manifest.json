@@ -2,7 +2,7 @@
   "name": "Aloha",
   "description": "Replace new tab page with a short video that will melt your heart.",
   "short_name": "Replace new tab page with a short video that will melt your heart.",
-  "version": "0.2",
+  "version": "1.0",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "blank.html"
