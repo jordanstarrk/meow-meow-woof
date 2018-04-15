@@ -1,19 +1,19 @@
 {
-  "name": "Aloha",
-  "description": "Replace new tab page with a short video that will melt your heart.",
-  "short_name": "Replace new tab page with a short video that will melt your heart.",
-  "version": "1.0",
-  "incognito": "split",
-  "chrome_url_overrides": {
-    "newtab": "blank.html"
-  },
-
-  "icons": {
-  	"19":"starrk19.png"
-  },
-
-  "browser_action": {
-  	"default_icon": "starrk19.png"
-  },
-  "manifest_version": 2
+   "browser_action": {
+      "default_icon": "starrk19.png"
+   },
+   "chrome_url_overrides": {
+      "newtab": "blank.html"
+   },
+   "description": "Replace your new tab page with fluffy cuteness.",
+   "icons": {
+      "19": "starrk19.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
+   "manifest_version": 2,
+   "name": "Aloha",
+   "short_name": "Replace your new tab page with fluffy cuteness.",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
 }
