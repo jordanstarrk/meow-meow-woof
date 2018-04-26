@@ -20,14 +20,15 @@ var selectMp4 = [
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"18.mp4\"><source src=\"18.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"19.mp4\"><source src=\"19.mp4\" type=\"video/mp4\"></video>",
 	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"20.mp4\"><source src=\"20.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"21.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"22.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"23.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"21.mp4\"><source src=\"21.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"22.mp4\"><source src=\"22.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"23.mp4\"><source src=\"23.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"23.mp4\"><source src=\"24.mp4\" type=\"video/mp4\"></video>",
 ];
 
 //function to select an mp4 from the SelectMp4 array
 var pickAnMp4 = function () {
-var todaysMp4 = selectMp4[Math.floor(Math.random() * 23)];
+var todaysMp4 = selectMp4[Math.floor(Math.random() * 24)];
 return todaysMp4;
 };
 
