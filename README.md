@@ -1,4 +1,4 @@
-# Aloha README
+# meow meow woof README
 Replace your new tab page with fluffy cuteness.
 
 This is a native client application and only works in Chrome web browser.
@@ -11,6 +11,7 @@ Subject: Aloha
 
 Thank you https://videos.pexels.com, https://videezy.com, and http://www.wedistill.io/ for the stock videos! 
 
-Created by: meow meow w00f (Instagram: @meow_meow_w00f)
+Created by: meow meow woof
+Instagram: @meow_meow_w00f
 Date Created: April 2017
 Date Updated: April 15, 2018
