@@ -1,0 +1,1 @@
+src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"

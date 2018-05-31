@@ -1,34 +1,34 @@
 //array of all mp4 videos in extension file
 var selectMp4 = [
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"1.mp4\"><source src=\"1.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"2.mp4\"><source src=\"2.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"3.mp4\"><source src=\"3.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"4.mp4\"><source src=\"4.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"5.mp4\"><source src=\"5.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"6.mp4\"><source src=\"6.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"7.mp4\"><source src=\"7.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"8.mp4\"><source src=\"8.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"9.mp4\"><source src=\"9.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"10.mp4\"><source src=\"10.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"11.mp4\"><source src=\"11.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"12.mp4\"><source src=\"12.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"13.mp4\"><source src=\"13.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"14.mp4\"><source src=\"14.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"15.mp4\"><source src=\"15.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"16.mp4\"><source src=\"16.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"17.mp4\"><source src=\"17.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"18.mp4\"><source src=\"18.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"19.mp4\"><source src=\"19.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"20.mp4\"><source src=\"20.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"21.mp4\"><source src=\"21.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"22.mp4\"><source src=\"22.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"23.mp4\"><source src=\"23.mp4\" type=\"video/mp4\"></video>",
-	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"23.mp4\"><source src=\"24.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"https://firebasestorage.googleapis.com/v0/b/meow-meow-w00f.appspot.com/o/1.mp4?alt=media&token=b859b45a-5f92-4506-93c1-ca56f85d3ff6\"><source src=\"https://firebasestorage.googleapis.com/v0/b/meow-meow-w00f.appspot.com/o/1.mp4?alt=media&token=b859b45a-5f92-4506-93c1-ca56f85d3ff6\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"https://firebasestorage.googleapis.com/v0/b/meow-meow-w00f.appspot.com/o/1.mp4?alt=media&token=b859b45a-5f92-4506-93c1-ca56f85d3ff6\"><source src=\"https://firebasestorage.googleapis.com/v0/b/meow-meow-w00f.appspot.com/o/1.mp4?alt=media&token=b859b45a-5f92-4506-93c1-ca56f85d3ff6\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/3.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/3.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/4.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/4.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/5.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/5.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/6.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/6.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/7.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/7.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/8.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/8.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/9.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/9.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/10.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/10.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/11.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/11.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/12.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/12.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/13.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/13.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/14.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/14.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/15.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/15.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/16.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/16.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/17.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/17.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/18.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/18.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/19.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/19.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/20.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/20.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/21.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/21.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/22.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/22.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/23.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/23.mp4\" type=\"video/mp4\"></video>",
+	"<video class=\"fullscreen-video\" loop muted autoplay poster=\"gs://meow-meow-w00f.appspot.com/24.mp4\"><source src=\"gs://meow-meow-w00f.appspot.com/24.mp4\" type=\"video/mp4\"></video>",
 ];
 
 //function to select an mp4 from the SelectMp4 array
 var pickAnMp4 = function () {
-var todaysMp4 = selectMp4[Math.floor(Math.random() * 24)];
+var todaysMp4 = selectMp4[Math.floor(Math.random() * 1)];
 return todaysMp4;
 };
 
