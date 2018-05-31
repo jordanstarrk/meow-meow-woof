@@ -5,6 +5,7 @@
    "chrome_url_overrides": {
       "newtab": "blank.html"
    },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Replace your new tab page with fluffy cuteness.",
    "icons": {
       "19": "starrk19.png"
@@ -15,6 +16,5 @@
    "name": "meow meow woof",
    "short_name": "Replace your new tab page with fluffy cuteness.",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.5",
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+   "version": "1.5"
 }
