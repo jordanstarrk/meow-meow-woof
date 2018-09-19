@@ -1,20 +1,20 @@
 {
    "browser_action": {
-      "default_icon": "starrk19.png"
+      "default_icon": "cat.png"
    },
    "chrome_url_overrides": {
-      "newtab": "blank.html"
+      "newtab": "cat.html"
    },
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-   "description": "Replace your new tab page with fluffy cuteness.",
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
+   "description": "Enjoy an adorable cat and kitten extension. This cat extension is all you need. Every time you open a new tab in Chrome, be delighted by a short video of a cat or kitten.",
    "icons": {
-      "19": "starrk19.png"
+      "19": "cat.png"
    },
    "incognito": "split",
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
    "manifest_version": 2,
-   "name": "meow meow woof",
-   "short_name": "Replace your new tab page with fluffy cuteness.",
+   "name": "Meow Meow Woof - Cat & Kitten New Tab Extension",
+   "short_name": "Meow Meow Woof - Cat & Kitten New Tab Extension.",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.6"
+   "version": "2.0"
 }

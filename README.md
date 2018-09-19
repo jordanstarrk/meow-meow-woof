@@ -1,9 +1,9 @@
 # meow meow woof README
 Replace your new tab page with fluffy cuteness.
 
-This is a native client application and only works in Chrome web browser.
+This is a native client application and will only work in Chrome web browser.
 
-You can contribute by sending your high quality video loops and I will add them in!
+You can contribute by sending your high quality video loops to add to our new tab extension and I will add them in!
 
 Send me your videos if you would like them added!
 Email: meow.meow.n.w00f@gmail.com 
@@ -14,4 +14,4 @@ Thank you https://videos.pexels.com, https://videezy.com, and http://www.wedisti
 Created by: meow meow woof
 Instagram: @meow_meow_w00f
 Date Created: April 2017
-Date Updated: June 7, 2018
+Date Updated: September 18, 2018
