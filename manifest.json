@@ -6,15 +6,15 @@
       "newtab": "cat.html"
    },
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
-   "description": "Enjoy an adorable cat extension. This cat extension will have you delighted by a short cat or kitten clip when you open a new tab.",
+   "description": "Enjoy an adorable cat video extension. This cat extension plays a short cat or kitten video when you open a new tab.",
    "icons": {
       "19": "cat.png"
    },
    "incognito": "split",
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
    "manifest_version": 2,
-   "name": "Meow Meow Woof - Cat New Tab Extension",
-   "short_name": "Meow Meow Woof - Cat New Tab Extension.",
+   "name": "Cat Video New Tab Extension",
+   "short_name": "Cat Video New Tab Extension.",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.0"
 }
