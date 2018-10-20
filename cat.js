@@ -32,16 +32,5 @@ return mp4string;
 //replace HTML for div 'arrayString' with the random mp4 video string 
 document.getElementById("arrayString").innerHTML=pickAnMp4();
 
-/* This will pop up a form for people to complete when they uninstall the app
-/* Check whether new version is installed */
-chrome.runtime.onInstalled.addListener(function(details) {
-    /* other 'reason's include 'update' */
-    if (details.reason == "install") {
-        /* If first install, set uninstall URL */
-        var uninstallGoogleFormLink = 'https://goo.gl/forms/BupTCsXbi7c9KjN02';
-        /* If Chrome version supports it... */
-        if (chrome.runtime.setUninstallURL) {
-            chrome.runtime.setUninstallURL(uninstallGoogleFormLink);
-        }
-    }
-});
+/* This will pop up a form for people to complete when they uninstall the app*/
+chrome.runtime.setUninstallURL('https://goo.gl/forms/BupTCsXbi7c9KjN02');
