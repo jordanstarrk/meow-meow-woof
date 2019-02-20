@@ -33,4 +33,4 @@ return mp4string;
 document.getElementById("arrayString").innerHTML=pickAnMp4();
 
 /* This will pop up a form for people to complete when they uninstall the app*/
-chrome.runtime.setUninstallURL('https://goo.gl/forms/BupTCsXbi7c9KjN02');
+chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
