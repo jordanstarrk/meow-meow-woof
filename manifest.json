@@ -13,8 +13,8 @@
    "incognito": "split",
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
    "manifest_version": 2,
-   "name": "Cat Video New Tab Extension",
-   "short_name": "Cat Video New Tab Extension.",
+   "name": "New Tab - Cat Video Extension",
+   "short_name": "meow meow w00f",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.3.0"
+   "version": "2.3.1"
 }
