@@ -45,7 +45,7 @@ If you are interested in contributing to this project, please reach out to us vi
 
 ## Author
 
-* **Jordan Starr** 
+* Jordan Starr
 
 
 ## Acknowledgments
