@@ -6,7 +6,7 @@
       "newtab": "cat.html"
    },
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
-   "description": "Enjoy an adorable cat video extension. This cat extension plays a short cat or kitten video when you open a new tab.",
+   "description": "Replace new tab page with an adorable video of a cats playing, sleeping, and more all for free with no ads! New Tab Cats Video Extension gives you a short break before starting your next task. Join us and our users across 25 countries! This extension is made for animal lovers. Download our extension for cats & kittens. Don't forget to also follow us on Instagram for more cat and kitten content @meow_meow_w00f",
    "icons": {
       "19": "cat.png"
    },
@@ -14,7 +14,7 @@
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
    "manifest_version": 2,
    "name": "New Tab - Cat Video Extension",
-   "short_name": "meow meow w00f",
+   "short_name": "meow meow woof",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.3.1"
+   "version": "2.3.2"
 }
