@@ -1,3 +1,6 @@
+/*********************************************
+Google Analytics Widget 
+**********************************************/
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-117531599-1']);
 _gaq.push(['_trackPageview']);

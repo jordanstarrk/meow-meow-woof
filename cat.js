@@ -1,42 +1,24 @@
-// array of all mp4 videos in extension file
-var videos = ["https://s3.amazonaws.com/meowmeoww00f/01.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/02.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/03.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/04.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/05.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/06.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/07.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/08.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/09.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/10.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/11.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/12.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/13.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/14.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/15.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/16.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/17.mp4", 
-"https://s3.amazonaws.com/meowmeoww00f/18.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/19.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/20.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/21.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/22.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/23.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/24.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/25.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/26.mp4",
-"https://s3.amazonaws.com/meowmeoww00f/27.mp4",];
-// select a random video from the video array
-var videoRandom = videos[Math.floor(Math.random() * 27)];
-//string to output for displaying mp4
-//function to choose random item in video array and add the right string for output 
-//function to select an mp4 from the SelectMp4 array
-var pickAnMp4 = function () {
-var mp4string = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + videoRandom + "\"><source src=\"" + videoRandom + "\" type=\"video/mp4\"></video>";
-return mp4string;
-};
-//replace HTML for div 'arrayString' with the random mp4 video string 
-document.getElementById("arrayString").innerHTML=pickAnMp4();
+/*********************************************
+Replace the main html page with a random video
+**********************************************/
+//1. Create an array of videos that map to the video endpoints in AWS 
+var videoList = [];
+for (var video=1; video<28; video++) { 
+	videoList.push("https://s3.amazonaws.com/meowmeoww00f/Videos/"+video+".mp4");
+}
 
-/* This will pop up a form for people to complete when they uninstall the app*/
+//2. Select a random video from the list & return the random video number wrapped in HTML content to autoplay the video in a loop
+var randomVideo = videoList[Math.floor(Math.random() * videoList.length)]; //
+var pickaVideo = function() {
+	//2a. Create the HTML code to autoplay a video and insert the reference to the randomized video number
+	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + randomVideo + "\"><source src=\"" + randomVideo + "\" type=\"video/mp4\"></video>";
+	return HtmlVideoString;
+};
+
+//3. Replace the innerHTML of the main page div with the randomly chosen video
+document.getElementById("arrayString").innerHTML=pickaVideo();
+
+/*********************************************
+Redirect users to a feedback form on uninstall
+**********************************************/
 chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
