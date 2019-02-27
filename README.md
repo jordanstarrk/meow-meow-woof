@@ -40,7 +40,7 @@ Load unpacked extension into Google Chrome
 
 ## Contributing
 
-If you are interested in contributing to this project, please reach out to us via email at meow.meow.n.w00f@gmail.com 
+If you are interested in contributing to this project, please reach out to us at meow.meow.n.w00f@gmail.com 
 
 
 ## Author
