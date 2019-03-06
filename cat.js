@@ -3,8 +3,10 @@ Replace the main html page with a random video
 **********************************************/
 //1. Create an array of videos that map to the video endpoints in AWS 
 var videoList = [];
-const NUMBER_OF_VIDEOS = 28; //change this number based on the number of videos in the storage 
+const INSERT_VIDEO_COUNT_HERE = 31 //Add the total number of videos here.  
 
+
+const NUMBER_OF_VIDEOS = INSERT_VIDEO_COUNT_HERE + 1; 
 for (var video=1; video<NUMBER_OF_VIDEOS; video++) { 
 	videoList.push("https://s3.amazonaws.com/meowmeoww00f/Videos/"+video+".mp4");
 }
