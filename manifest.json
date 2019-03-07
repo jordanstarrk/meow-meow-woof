@@ -6,7 +6,7 @@
       "newtab": "index.html"
    },
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
-   "description": "Replace your new tab page with a cat videos. No ads!,
+   "description": "Replace your new tab page with a cat videos. No ads!",
    "icons": {
       "19": "/src/assets/cat.png"
    },
