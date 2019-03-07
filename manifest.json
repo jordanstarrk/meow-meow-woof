@@ -6,7 +6,7 @@
       "newtab": "index.html"
    },
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
-   "description": "Replace new tab page with an adorable video of a cats playing, sleeping, and more all for free with no ads! New Tab Cats Video Extension gives you a short break before starting your next task. Join us and our users across 25 countries! This extension is made for animal lovers. Download our extension for cats & kittens. Don't forget to also follow us on Instagram for more cat and kitten content @meow_meow_w00f",
+   "description": "Replace your new tab page with a cat videos. No ads!,
    "icons": {
       "19": "/src/assets/cat.png"
    },
