@@ -3,7 +3,7 @@ Replace the main html page with a random video
 **********************************************/
 //1. Create an array of videos that map to the video endpoints in AWS 
 var videoList = [];
-const INSERT_VIDEO_COUNT_HERE = 33 //Add the total number of videos here.  
+const INSERT_VIDEO_COUNT_HERE = 40 //Add the total number of videos here.  
 
 
 const NUMBER_OF_VIDEOS = INSERT_VIDEO_COUNT_HERE + 1; 
