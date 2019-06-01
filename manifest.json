@@ -1,6 +1,6 @@
 {
    "browser_action": {
-      "default_icon": "/src/assets/cat.png"
+      "default_icon": "/cat.png"
    },
    "chrome_url_overrides": {
       "newtab": "index.html"
@@ -8,7 +8,7 @@
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
    "description": "Replace your new tab page with a cat videos. No ads!",
    "icons": {
-      "19": "/src/assets/cat.png"
+      "19": "/cat.png"
    },
    "incognito": "split",
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3iU6UhGFmFRp4IFTRM9iAlAvhCUqTefKwcYVHf860j1sDVuUfd8FdCQcUUM6BWzGHynCpwsShka7Zw8FKbH2t6AJN9KChq14lf8lBbSFEDNQEgW2UH91id/HwtO+1ZAQqrnvDGyXYgORjBZBcVz5fOgEGW1KwOiiPttivmcpqhWyHtqryN4X0wZAisw8Tmi/BQJ3ldHuENAzosXle1VAyOZdOrvnyC4vjNRtW92C7LFNk2spHIBMmni1Cre23A+ERaG/riVGMWBRzS4m/IwuP5YsJU0zd49iiRU4CUkacinyZI3ZMTf/DA8Arzsxwb1zcVTTWIolQRkWDP+OVb8HpQIDAQAB",
@@ -16,5 +16,5 @@
    "name": "New Tab - Cat Video Extension",
    "short_name": "meow meow woof",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "3.0.0"
+   "version": "2.4.1"
 }
