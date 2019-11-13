@@ -5,7 +5,7 @@
    "chrome_url_overrides": {
       "newtab": "index.html"
    },
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; object-src 'self'",
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://s3.amazonaws.com/meowmeoww00f/; d9m01xi7ip4je.cloudfront.net; object-src 'self'",
    "description": "Replace your new tab page with a cat videos. No ads!",
    "icons": {
       "19": "/cat.png"
