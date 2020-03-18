@@ -1,0 +1,112 @@
+.fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+#feedbackButton {
+  font-family: 'Roboto', sans-serif;
+  color: white; 
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-size: 18px;
+  text-decoration: none;
+  text-shadow: 0 0 25px;
+  opacity: 0.75;
+}
+
+.menuButton {
+  font-family: 'Roboto', sans-serif;
+  color: white; 
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-size: 18px;
+  text-decoration: none;
+  text-shadow: 0 0 25px;
+  opacity: 0.5;
+  background-color: black;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.menu {
+  position: relative;
+  margin: auto;
+  top: 100px;
+  width: 600px;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  display: none;
+}
+
+
+.category {
+  position: relative;
+  color: white;
+  height: 2px;
+  padding-left: 65px;
+  width: 10%;
+}
+
+#cats{
+
+}
+
+#dogs{
+
+  margin-top: 110px;
+}
+
+
+h2 {
+  position: relative;
+  color: white;
+  font-size: 24px;
+  padding-left: 190px;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 24px;
+}
+
+p {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  position: absolute;
+  right: 20px;
+  margin-top: 120px;
+
+}
+
+
+.closeIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+} 
