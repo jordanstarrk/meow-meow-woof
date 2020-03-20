@@ -2,29 +2,36 @@
 Replace the main html page with a random video
 **********************************************/
 //1. Create an array of videos that map to the video endpoints in AWS 
-var videoList = [];
-const INSERT_VIDEO_COUNT_HERE = 56 
-const NUMBER_OF_VIDEOS = INSERT_VIDEO_COUNT_HERE + 1; 
-for (var video=1; video<NUMBER_OF_VIDEOS; video++) { 
-	videoList.push("https://d9m01xi7ip4je.cloudfront.net/Videos/"+video+".mp4");
-}
+var catsOnlyVideoList = [];
+const INSERT_VIDEO_COUNT_HERE_CATS = 73; 
+const NUMBER_OF_CAT_VIDEOS = INSERT_VIDEO_COUNT_HERE_CATS + 1; 
+for (var video=1; video<NUMBER_OF_CAT_VIDEOS; video++) { 
+	catsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/cats/"+video+".mp4");
+};
 
-var dogsOnlyVideoList = ["https://d9m01xi7ip4je.cloudfront.net/categories/dogs/02.mp4", "https://d9m01xi7ip4je.cloudfront.net/categories/dogs/02.mp4", "https://d9m01xi7ip4je.cloudfront.net/categories/dogs/02.mp4"];
-var catsOnlyVideoList = ["https://d9m01xi7ip4je.cloudfront.net/categories/cats/01.mp4", "https://d9m01xi7ip4je.cloudfront.net/categories/cats/01.mp4", "https://d9m01xi7ip4je.cloudfront.net/categories/cats/01.mp4"];
+
+var dogsOnlyVideoList = [];
+const INSERT_VIDEO_COUNT_HERE_DOGS = 35; 
+const NUMBER_OF_DOG_VIDEOS = INSERT_VIDEO_COUNT_HERE_DOGS + 1; 
+for (var video=1; video<NUMBER_OF_DOG_VIDEOS; video++) { 
+	dogsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/dogs/"+video+".mp4");
+};
 
 var chooseRandomVideoListBetweenDogsAndCats = function(){
 	if ((Math.floor(Math.random() * 2)) == 0){
-		console.log("should be cat");
 		return catsOnlyVideoList;
 	} else {
-		console.log("should be dog");
 		return dogsOnlyVideoList;
 	}  
 }
 
 var getSavedUserCategoryListPreference = function(){
+	if (localStorage.getItem("category") == null) {
+		updateLocalStorageWithCategorySelection();
+	}
+
 	if (localStorage.getItem("category") == "noneSelected") {
-		alert("need to put something here");
+		disableMeow();
 
 	} else if (localStorage.getItem("category") == "catsAndDogs"){
 		return chooseRandomVideoListBetweenDogsAndCats();
@@ -35,7 +42,7 @@ var getSavedUserCategoryListPreference = function(){
 	} else if (localStorage.getItem("category") == "dogsOnly"){
 		return dogsOnlyVideoList;
 	}
-}; 
+}
 
 var updateLocalStorageWithCategorySelection = function (){
 	if ($("#cats").css("opacity") == 1 && $("#dogs").css("opacity") == 1){
@@ -98,16 +105,90 @@ var keepStateForMenuSelection = function(){
 
 }
 
+// var keepStateForTempOff = function (){
+// 	if (localStorage.getItem("disableMeowMeowW00f") == "yes") {
+// 		toggleTempOffIconOff();
+// 	}
+
+// 	if (localStorage.getItem("disableMeowMeowW00f") == "no") {
+// 		toggleTempOffIconOn();
+// 	}
+// }
+
+// var toggleTempOffIconOn = function() {
+// 	$(".toggleIcon").attr("src", "src/assets/toggle-on");
+// }
+
+// var toggleTempOffIconOff = function() {
+// 	$(".toggleIcon").attr("src", "src/assets/toggle-off");
+// }
+
+var checkIfMeowDisabled = function(){
+	if (localStorage.getItem("disableMeowMeowW00f") == null) {
+		return false;
+	}
+	if (localStorage.getItem("disableMeowMeowW00f") == true) {
+		return true;
+	}
+
+	if (localStorage.getItem("disableMeowMeowW00f") == false) {
+		return false;
+	}
+}
+
+var displayTempDisablePage = function() {
+	document.getElementById("arrayString").innerHTML="<img src='tempDisable.jpg' style='position: fixed; left: 0; top: 0; max-width: 100%;  z-index: -1;'/>";
+
+}
+
+var disableMeow = function(){	
+	// $(".toggleIcon").attr("src", "src/assets/toggle-off.svg");	
+	$("#cats").css("opacity", 0.5);
+	$("#dogs").css("opacity", 0.5);
+	$("#cats").off('click');
+	$("#dogs").off('click');
+    localStorage.setItem("disabledMeowMeowW00f", "yes");
+	displayTempDisablePage();
+}
+
+var enableMeow = function() {
+	// $(".toggleIcon").attr("src", "src/assets/toggle-on.svg");	
+	$("#cats").css("opacity", 1);
+	$("#dogs").css("opacity", 1);
+	$("#cats").off('click');
+	$("#dogs").off('click');
+	localStorage.setItem("disabledMeowMeowW00f", "no");
+	run();
+	keepStateForMenuSelection();
+	keepStateForTempOff();
+}
+
+
 var run = function(){
-	if (checkIfUserOnline() == true){
+	if (localStorage.getItem("disabledMeowMeowW00f") == "yes"){
+		disableMeow();
+	
+	} else if (checkIfUserOnline() == true && (localStorage.getItem("disabledMeowMeowW00f") == "no") || (localStorage.getItem("disabledMeowMeowW00f") == null)) {
 		listToPlay = getSavedUserCategoryListPreference();
 		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
 	} else {
-		offlineVideo = "offlineCat.mp4";
-		document.getElementById("arrayString").innerHTML=playAVideo(offlineVideo);	
+		displayTempDisablePage();
 	}
-}
+
+};
+
+
+// var run = function(){
+// 	if (checkIfUserOnline() == true){
+// 		listToPlay = getSavedUserCategoryListPreference();
+// 		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
+// 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
+// 	} else {
+// 		offlineVideo = "offlineCat.mp4";
+// 		document.getElementById("arrayString").innerHTML=playAVideo(offlineVideo);	
+// 	}
+// };
 
 run();
 keepStateForMenuSelection();

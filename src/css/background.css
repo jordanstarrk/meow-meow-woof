@@ -42,7 +42,7 @@
 .menuButton {
   font-family: 'Roboto', sans-serif;
   color: white; 
-  position: absolute;
+  position: fixed;
   bottom: 14px;
   right: 18px;
   font-size: 18px;
@@ -55,58 +55,120 @@
 }
 
 .menu {
-  position: relative;
+  position: fixed;
   margin: auto;
   top: 100px;
-  width: 600px;
-  height: 350px;
-  background: rgba(0, 0, 0, 0.7);
+  left: 25%;
+  width: 640px;
+  height: 428px;
+  background-color: #202124;
   border-radius: 4px;
-  display: none;
+/*  display: none;*/
 }
-
 
 .category {
   position: relative;
-  color: white;
   height: 2px;
-  padding-left: 65px;
-  width: 10%;
+/*  width: 10%;*/
 }
 
 #cats{
+  position: absolute;
+  width: 300px;
+  left: 140px;
+  height: 100px;
+  top: 75px;
+  text-align: center;
 
 }
 
 #dogs{
+  position: absolute;
+  width:300px;
+  height: 100px;
+  left: 140px;
+  text-align: center;
+  margin-top: 150px;
+}
 
-  margin-top: 110px;
+#toggle-button {
+  position: absolute;
+  top: 323px;
+  left: 350px;
+
 }
 
 
-h2 {
+#selectCategoryHeader {
   position: relative;
   color: white;
-  font-size: 24px;
-  padding-left: 190px;
-  font-family: 'Roboto', sans-serif;
-  padding-top: 24px;
-}
-
-p {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: absolute;
-  right: 20px;
-  margin-top: 120px;
-
-}
-
-
-.closeIcon {
-  position: absolute;
+  font-size: 20px;
+  font-family: Product Sans, "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  bottom: 8px;
+  width: 640px;
   top: 16px;
-  right: 16px;
-  width: 16px;
+  right: 10px;
+  margin: 10px;
+
+}
+
+.buttons{
+  position: absolute;
+  bottom: 8px;
+  font-family: Product Sans, Helvetica, Arial, sans-serif;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+#share-button{
+  right: 253px;
+
+
+}
+
+#donate-button{
+  right: 165px;
+
+}
+
+#feedback-button{
+  right: 8px;
+
+}
+
+#in-a-meeting {
+  position: absolute;
+  font-family: Product Sans;
+  color: white;
+  font-size: 14;
+  top:325px;
+  left: 140px;
+  width: 200px;
+}
+
+#closeIcon {
+  position: absolute;
+  width: 12px;
+  top: 12px;
+  right: 12px;
+
 } 
+
+.forum_hover { 
+  background-color: #979797;
+  cursor: pointer;
+}
+
+.close_hover { 
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Product Sans Thin'), local('ProductSans-Thin'), url(https://fonts.gstatic.com/s/productsans/v9/pxidypQkot1TnFhsFMOfGShddOeMaEw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

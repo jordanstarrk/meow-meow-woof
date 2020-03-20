@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>_Other components/Switch/Dense/On 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="19" cy="19" r="7.91666667"></circle>
+        <filter x="-41.1%" y="-34.7%" width="182.1%" height="182.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.235294118   0 0 0 0 0.250980392   0 0 0 0 0.262745098  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.235294118   0 0 0 0 0.250980392   0 0 0 0 0.262745098  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button-/-Toggle-States" transform="translate(-405.000000, -47.000000)">
+            <g id="_Other-components/Switch/Dense/On-2" transform="translate(403.000000, 50.000000)">
+                <g id="_Other-components/Switch/Dense/On">
+                    <g id="_Other-components/Switch/_atoms/Track/Enabled" transform="translate(2.000000, 2.000000)" fill="#4285F4" fill-rule="evenodd" opacity="0.54">
+                        <path d="M20.6470588,12 L5.35294118,12 C2.37058824,12 0,9.34285714 0,6 C0,2.65714286 2.37058824,0 5.35294118,0 L20.6470588,0 C23.6294118,0 26,2.65714286 26,6 C26,9.34285714 23.6294118,12 20.6470588,12 Z" id="track"></path>
+                    </g>
+                    <g id="_atoms/Handle/On/Enabled" transform="translate(3.000000, -11.000000)">
+                        <g id="Handle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#1A73E8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
