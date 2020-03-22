@@ -41,6 +41,7 @@
 
 .menuButton {
   font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   color: white; 
   position: fixed;
   bottom: 14px;
@@ -60,10 +61,10 @@
   top: 100px;
   left: 25%;
   width: 640px;
-  height: 428px;
+  height: 370px;
   background-color: #202124;
   border-radius: 4px;
-/*  display: none;*/
+  display: none;
 }
 
 .category {
@@ -91,19 +92,12 @@
   margin-top: 150px;
 }
 
-#toggle-button {
-  position: absolute;
-  top: 323px;
-  left: 350px;
-
-}
-
-
 #selectCategoryHeader {
   position: relative;
   color: white;
   font-size: 20px;
-  font-family: Product Sans, "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   text-align: center;
   bottom: 8px;
   width: 640px;
@@ -116,7 +110,9 @@
 .buttons{
   position: absolute;
   bottom: 8px;
-  font-family: Product Sans, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
@@ -124,28 +120,14 @@
 
 #share-button{
   right: 253px;
-
-
 }
 
 #donate-button{
   right: 165px;
-
 }
 
 #feedback-button{
   right: 8px;
-
-}
-
-#in-a-meeting {
-  position: absolute;
-  font-family: Product Sans;
-  color: white;
-  font-size: 14;
-  top:325px;
-  left: 140px;
-  width: 200px;
 }
 
 #closeIcon {
@@ -153,7 +135,6 @@
   width: 12px;
   top: 12px;
   right: 12px;
-
 } 
 
 .forum_hover { 
@@ -165,10 +146,3 @@
   cursor: pointer;
 }
 
-@font-face {
-  font-family: 'Product Sans';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Product Sans Thin'), local('ProductSans-Thin'), url(https://fonts.gstatic.com/s/productsans/v9/pxidypQkot1TnFhsFMOfGShddOeMaEw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}

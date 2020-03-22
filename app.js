@@ -1,14 +1,9 @@
-/*********************************************
-Replace the main html page with a random video
-**********************************************/
-//1. Create an array of videos that map to the video endpoints in AWS 
 var catsOnlyVideoList = [];
 const INSERT_VIDEO_COUNT_HERE_CATS = 73; 
 const NUMBER_OF_CAT_VIDEOS = INSERT_VIDEO_COUNT_HERE_CATS + 1; 
 for (var video=1; video<NUMBER_OF_CAT_VIDEOS; video++) { 
 	catsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/cats/"+video+".mp4");
 };
-
 
 var dogsOnlyVideoList = [];
 const INSERT_VIDEO_COUNT_HERE_DOGS = 35; 
@@ -27,11 +22,12 @@ var chooseRandomVideoListBetweenDogsAndCats = function(){
 
 var getSavedUserCategoryListPreference = function(){
 	if (localStorage.getItem("category") == null) {
-		updateLocalStorageWithCategorySelection();
+		$("#dogs").css("opacity") == 0.4;
+		return catsOnlyVideoList;
 	}
 
 	if (localStorage.getItem("category") == "noneSelected") {
-		disableMeow();
+		return -1;
 
 	} else if (localStorage.getItem("category") == "catsAndDogs"){
 		return chooseRandomVideoListBetweenDogsAndCats();
@@ -73,7 +69,6 @@ var playAVideo = function(listToPlay, numberInChosenList) {
 	return HtmlVideoString;
 };
 
-//3. Replace the innerHTML of the main page div with the randomly chosen video
 var checkIfUserOnline = function(){
 	if (window.navigator.onLine == true){
 		return true;
@@ -103,98 +98,26 @@ var keepStateForMenuSelection = function(){
 		$("#dogs").css("opacity", 1);
 	}
 
-}
-
-// var keepStateForTempOff = function (){
-// 	if (localStorage.getItem("disableMeowMeowW00f") == "yes") {
-// 		toggleTempOffIconOff();
-// 	}
-
-// 	if (localStorage.getItem("disableMeowMeowW00f") == "no") {
-// 		toggleTempOffIconOn();
-// 	}
-// }
-
-// var toggleTempOffIconOn = function() {
-// 	$(".toggleIcon").attr("src", "src/assets/toggle-on");
-// }
-
-// var toggleTempOffIconOff = function() {
-// 	$(".toggleIcon").attr("src", "src/assets/toggle-off");
-// }
-
-var checkIfMeowDisabled = function(){
-	if (localStorage.getItem("disableMeowMeowW00f") == null) {
-		return false;
-	}
-	if (localStorage.getItem("disableMeowMeowW00f") == true) {
-		return true;
-	}
-
-	if (localStorage.getItem("disableMeowMeowW00f") == false) {
-		return false;
+	if (localStorage.getItem("category") == null){
+		$("#dogs").css("opacity", 0.4);
 	}
 }
-
-var displayTempDisablePage = function() {
-	document.getElementById("arrayString").innerHTML="<img src='tempDisable.jpg' style='position: fixed; left: 0; top: 0; max-width: 100%;  z-index: -1;'/>";
-
-}
-
-var disableMeow = function(){	
-	// $(".toggleIcon").attr("src", "src/assets/toggle-off.svg");	
-	$("#cats").css("opacity", 0.5);
-	$("#dogs").css("opacity", 0.5);
-	$("#cats").off('click');
-	$("#dogs").off('click');
-    localStorage.setItem("disabledMeowMeowW00f", "yes");
-	displayTempDisablePage();
-}
-
-var enableMeow = function() {
-	// $(".toggleIcon").attr("src", "src/assets/toggle-on.svg");	
-	$("#cats").css("opacity", 1);
-	$("#dogs").css("opacity", 1);
-	$("#cats").off('click');
-	$("#dogs").off('click');
-	localStorage.setItem("disabledMeowMeowW00f", "no");
-	run();
-	keepStateForMenuSelection();
-	keepStateForTempOff();
-}
-
 
 var run = function(){
-	if (localStorage.getItem("disabledMeowMeowW00f") == "yes"){
-		disableMeow();
-	
-	} else if (checkIfUserOnline() == true && (localStorage.getItem("disabledMeowMeowW00f") == "no") || (localStorage.getItem("disabledMeowMeowW00f") == null)) {
+	if (checkIfUserOnline() == true){
 		listToPlay = getSavedUserCategoryListPreference();
 		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
+		keepStateForMenuSelection();
 	} else {
-		displayTempDisablePage();
+		offlineVideo = "src/assets/offlineCat.mp4";
+		return document.getElementById("arrayString").innerHTML="<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + offlineVideo + "\"><source src=\"" + offlineVideo + "\" type=\"video/mp4\"></video>";
 	}
-
 };
 
-
-// var run = function(){
-// 	if (checkIfUserOnline() == true){
-// 		listToPlay = getSavedUserCategoryListPreference();
-// 		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
-// 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
-// 	} else {
-// 		offlineVideo = "offlineCat.mp4";
-// 		document.getElementById("arrayString").innerHTML=playAVideo(offlineVideo);	
-// 	}
-// };
-
 run();
-keepStateForMenuSelection();
 
 /*********************************************
 Redirect users to a feedback form on uninstall
 **********************************************/
 chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
-

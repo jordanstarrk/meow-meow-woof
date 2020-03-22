@@ -14,10 +14,6 @@ $("#closeIcon").click(function(){
     $(".menu").hide();
 });
 
-//Feedback - click to go to feedback form
-$("p").click(function(){
-    window.open('https://goo.gl/forms/T9hSIDhhrp4Bgnqg2', 'Feedback'); 
-});
 
 //When a user clicks on cats category item it should deselect
 $("#cats").click(function() {    
@@ -27,7 +23,6 @@ $("#cats").click(function() {
         $(this).css("opacity", 0.4);
     }
     updateLocalStorageWithCategorySelection();
-
 });
 
 //When a user clicks on dogs category item it should deselect
@@ -59,29 +54,6 @@ $('#closeIcon').hover(function(){
 $('.category').hover(function(){
     $(this).toggleClass('close_hover');
 });
-
-
-$("#toggle-button").html( "<img src='src/assets/toggle-on.svg'>");
-$("#toggle-button").click(function(){
-    if (localStorage.getItem("meow disabled") == null)  {
-        $("#toggle-button").html( "<img src='src/assets/toggle-off.svg'>");
-        localStorage.setItem("meow disabled", "true");
-        return 1
-    }
-
-    if (localStorage.getItem("meow disabled") == "true")  {
-        $("#toggle-button").html( "<img src='src/assets/toggle-on.svg'>");
-        localStorage.setItem("meow disabled", "false");
-        return 0 
-    }
-
-    if (localStorage.getItem("meow disabled") == "false") {
-        $("#toggle-button").html( "<img src='src/assets/toggle-off.svg'>");
-        localStorage.setItem("meow disabled", "true");
-        return 1
-    }
-});
-
 
 $("#share-button").click(function(){
     window.open('https://chrome.google.com/webstore/detail/new-tab-cat-video-extensi/lcpipfmjdfelofldlehfiogoogpkjiea?hl=en');
