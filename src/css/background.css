@@ -2,7 +2,19 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+
 }
+
+#tempDisable{
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .fullscreen-video {
     position: absolute;
     top: 0;

@@ -12,13 +12,15 @@ for (var video=1; video<NUMBER_OF_DOG_VIDEOS; video++) {
 	dogsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/dogs/"+video+".mp4");
 };
 
+var tempDisablePicture = ["src/assets/tempDisable.jpg"];
+
 var chooseRandomVideoListBetweenDogsAndCats = function(){
 	if ((Math.floor(Math.random() * 2)) == 0){
 		return catsOnlyVideoList;
 	} else {
 		return dogsOnlyVideoList;
 	}  
-}
+};
 
 var getSavedUserCategoryListPreference = function(){
 	if (localStorage.getItem("category") == null) {
@@ -27,7 +29,7 @@ var getSavedUserCategoryListPreference = function(){
 	}
 
 	if (localStorage.getItem("category") == "noneSelected") {
-		return -1;
+		return tempDisablePicture;
 
 	} else if (localStorage.getItem("category") == "catsAndDogs"){
 		return chooseRandomVideoListBetweenDogsAndCats();
@@ -38,24 +40,24 @@ var getSavedUserCategoryListPreference = function(){
 	} else if (localStorage.getItem("category") == "dogsOnly"){
 		return dogsOnlyVideoList;
 	}
-}
+};
 
 var updateLocalStorageWithCategorySelection = function (){
 	if ($("#cats").css("opacity") == 1 && $("#dogs").css("opacity") == 1){
 		localStorage.setItem("category", "catsAndDogs");
-		console.log("CATS AND DOGS");
+		// console.log("CATS AND DOGS");
 	}
 	if ($("#cats").css("opacity") == 0.4 && $("#dogs").css("opacity") == 0.4){
 		localStorage.setItem("category", "noneSelected");
-		console.log("None?");
+		// console.log("None?");
 	}
 	if ($("#cats").css("opacity") == 1 && $("#dogs").css("opacity") == 0.4){
 		localStorage.setItem("category", "catsOnly");
-		console.log("CATS ONLY");
+		// console.log("CATS ONLY");
 	}
 	if ($("#cats").css("opacity") == 0.4 && $("#dogs").css("opacity") == 1){
 		localStorage.setItem("category", "dogsOnly");
-		console.log("DOGS ONLY");
+		// console.log("DOGS ONLY");
 	}
 };
 
@@ -66,6 +68,17 @@ var getRandomNumberInChosenList = function(chosenList){
 
 var playAVideo = function(listToPlay, numberInChosenList) {
 	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + numberInChosenList + "\"><source src=\"" + numberInChosenList + "\" type=\"video/mp4\"></video>";
+	return HtmlVideoString;
+};
+
+var playAPicture = function() {
+	var HtmlVideoString = "<img src=\"tempDisable.jpg\" id=\"tempDisable\">";
+	return HtmlVideoString;
+};
+
+var playOfflineVideo = function() {
+	offlineVideo = "src/assets/offlineCat.mp4";
+	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + offlineVideo + "\"><source src=\"" + offlineVideo + "\" type=\"video/mp4\"></video>";
 	return HtmlVideoString;
 };
 
@@ -101,18 +114,22 @@ var keepStateForMenuSelection = function(){
 	if (localStorage.getItem("category") == null){
 		$("#dogs").css("opacity", 0.4);
 	}
-}
+};
 
 var run = function(){
-	if (checkIfUserOnline() == true){
-		listToPlay = getSavedUserCategoryListPreference();
+	listToPlay = getSavedUserCategoryListPreference();
+	if (checkIfUserOnline() == true && getSavedUserCategoryListPreference() == "tempDisablePicture"){
+		document.getElementById("arrayString").innerHTML=playAPicture();
+		keepStateForMenuSelection();
+		
+	} else if (checkIfUserOnline() == true){
 		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
 		keepStateForMenuSelection();
-	} else {
-		offlineVideo = "src/assets/offlineCat.mp4";
-		return document.getElementById("arrayString").innerHTML="<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + offlineVideo + "\"><source src=\"" + offlineVideo + "\" type=\"video/mp4\"></video>";
 	}
+	 else {
+		document.getElementById("arrayString").innerHTML=playOfflineVideo();
+	};
 };
 
 run();
