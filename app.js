@@ -1,5 +1,5 @@
 var catsOnlyVideoList = [];
-const INSERT_VIDEO_COUNT_HERE_CATS = 73; 
+const INSERT_VIDEO_COUNT_HERE_CATS = 80; 
 const NUMBER_OF_CAT_VIDEOS = INSERT_VIDEO_COUNT_HERE_CATS + 1; 
 for (var video=1; video<NUMBER_OF_CAT_VIDEOS; video++) { 
 	catsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/cats/"+video+".mp4");
