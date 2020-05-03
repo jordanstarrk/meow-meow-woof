@@ -12,7 +12,7 @@ for (var video=1; video<NUMBER_OF_DOG_VIDEOS; video++) {
 	dogsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/dogs/"+video+".mp4");
 };
 
-var tempDisablePicture = ["src/assets/tempDisable.jpg"];
+var tempDisablePicture = ["src/assets/images/tempDisable.jpg"];
 
 var chooseRandomVideoListBetweenDogsAndCats = function(){
 	if ((Math.floor(Math.random() * 2)) == 0){
@@ -72,12 +72,12 @@ var playAVideo = function(listToPlay, numberInChosenList) {
 };
 
 var playAPicture = function() {
-	var HtmlVideoString = "<img src=\"tempDisable.jpg\" id=\"tempDisable\">";
+	var HtmlVideoString = "<img src=\"assets\"images\"tempDisable.jpg\" id=\"tempDisable\">";
 	return HtmlVideoString;
 };
 
 var playOfflineVideo = function() {
-	offlineVideo = "src/assets/offlineCat.mp4";
+	offlineVideo = "src/assets/images/offlineCat.mp4";
 	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + offlineVideo + "\"><source src=\"" + offlineVideo + "\" type=\"video/mp4\"></video>";
 	return HtmlVideoString;
 };
