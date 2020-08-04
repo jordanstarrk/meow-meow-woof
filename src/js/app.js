@@ -27,7 +27,6 @@ var getSavedUserCategoryListPreference = function(){
 		$("#dogs").css("opacity") == 0.4;
 		return catsOnlyVideoList;
 	}
-
 	if (localStorage.getItem("category") == "noneSelected") {
 		return tempDisablePicture;
 
