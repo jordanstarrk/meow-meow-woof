@@ -5,7 +5,10 @@ $('.homeButton').hover(function(){
 });
 
 $(".homeButton").click(function(){
-    window.open('chrome-search://local-ntp/local-ntp.html');
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        var active = tabs[0].id;
+        chrome.tabs.update(active, { url: "chrome-search://local-ntp/local-ntp.html" }, function() { });
+    });
 });
 
 //Meow Menu --> Show/hide menu on click
