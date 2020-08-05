@@ -46,7 +46,7 @@ html, body {
 
 #feedbackButton {
   font-family: 'Roboto', sans-serif;
-  color: white; 
+  color: white;
   position: absolute;
   bottom: 14px;
   right: 18px;
@@ -56,20 +56,37 @@ html, body {
   opacity: 0.75;
 }
 
+.homeButton {
+  /*font-family: 'Roboto', sans-serif;*/
+  /*font-weight: 100;*/
+  /*color: white;*/
+  position: fixed;
+  bottom: 20px;
+  right: 122px;
+  /*font-size: 18px;*/
+  /*text-decoration: none;*/
+  /*text-shadow: 0 0 25px;*/
+  opacity: 0.6;
+  background-color: black;
+  /*padding: 8px;*/
+  border-radius: 90px;
+  padding: 10px;
+  /*border-radius: 10px;*/
+}
 .menuButton {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: white; 
+  font-weight: normal;
+  color: white;
   position: fixed;
-  bottom: 22px;
+  bottom: 20px;
   right: 22px;
   font-size: 18px;
   text-decoration: none;
   text-shadow: 0 0 25px;
-  opacity: 0.5;
+  opacity: 0.6;
   background-color: black;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 10px 16px 10px 16px;
+  border-radius: 32px;
 }
 
 .menu {
@@ -154,14 +171,14 @@ html, body {
   width: 12px;
   top: 12px;
   right: 12px;
-} 
+}
 
-.forum_hover { 
+.forum_hover {
   background-color: #979797;
   cursor: pointer;
 }
 
-.close_hover { 
+.close_hover {
   cursor: pointer;
 }
 
