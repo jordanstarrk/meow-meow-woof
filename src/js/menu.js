@@ -67,12 +67,12 @@ $("#feedback-button").click(function(){
 
 
 //Donate
-$('#donate-button').hover(function(){
+$('#shop').hover(function(){
     $(this).toggleClass('forum_hover');
 });
 
-$("#donate-button").click(function(){
-    window.open('https://paypal.me/pools/c/8nwH780H4m');
+$("#shop").click(function(){
+    window.open('https://teespring.com/meow-meow-woof?pid=972&utm_source=mmw&utm_medium=button&utm_campaign=inapp');
 });
 
 //Close button
