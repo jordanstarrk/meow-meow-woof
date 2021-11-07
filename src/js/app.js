@@ -1,12 +1,12 @@
 var catsOnlyVideoList = [];
-const INSERT_VIDEO_COUNT_HERE_CATS = 87;
+const INSERT_VIDEO_COUNT_HERE_CATS = 99;
 const NUMBER_OF_CAT_VIDEOS = INSERT_VIDEO_COUNT_HERE_CATS + 1;
 for (var video=1; video<NUMBER_OF_CAT_VIDEOS; video++) {
 	catsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/cats/"+video+".mp4");
 };
 
 var dogsOnlyVideoList = [];
-const INSERT_VIDEO_COUNT_HERE_DOGS = 61;
+const INSERT_VIDEO_COUNT_HERE_DOGS = 65;
 const NUMBER_OF_DOG_VIDEOS = INSERT_VIDEO_COUNT_HERE_DOGS + 1;
 for (var video=1; video<NUMBER_OF_DOG_VIDEOS; video++) {
 	dogsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/dogs/"+video+".mp4");
@@ -126,14 +126,27 @@ var run = function(){
 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
 		keepStateForMenuSelection();
 	}
-	 else {
+	else {
 		document.getElementById("arrayString").innerHTML=playOfflineVideo();
 	};
 };
 
-run();
+// Run main function. Try...Catch to prevent extension from running when on a non-new tab page.
+try {
+	run();
+}
+catch (error) {
+	// do nothing when user is not on new tab page
+}
+
 
 /*********************************************
 Redirect users to a feedback form on uninstall
 **********************************************/
-chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
+try {
+	chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
+}
+catch (error) {
+	// do nothing when user is not on new tab page 
+}
+
