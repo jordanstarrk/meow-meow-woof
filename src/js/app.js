@@ -126,14 +126,27 @@ var run = function(){
 		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
 		keepStateForMenuSelection();
 	}
-	 else {
+	else {
 		document.getElementById("arrayString").innerHTML=playOfflineVideo();
 	};
 };
 
-run();
+// Run main function. Try...Catch to prevent extension from running when on a non-new tab page.
+try {
+	run();
+}
+catch (error) {
+	// do nothing when user is not on new tab page
+}
+
 
 /*********************************************
 Redirect users to a feedback form on uninstall
 **********************************************/
-chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
+try {
+	chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
+}
+catch (error) {
+	// do nothing when user is not on new tab page 
+}
+
