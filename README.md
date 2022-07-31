@@ -1,7 +1,7 @@
 # Meow Meow Woof
 This cat extension plays a randomized cat video everytime you open a new tab in Google Chrome. Join us and our users across 75 countries! 
 
-Download our extension in the Google Chrome Store https://chrome.google.com/webstore/detail/new-tab-cat-video-extensi/lcpipfmjdfelofldlehfiogoogpkjiea. Don't forget to also follow us on Instagram for more cat and kitten content @meow_meow_w00f
+Download our extension in the Google Chrome Store https://chrome.google.com/webstore/detail/lcpipfmjdfelofldlehfiogoogpkjiea. Don't forget to also follow us on Instagram for more cat and kitten content @meow_meow_w00f
 
 ## Getting Started
 
