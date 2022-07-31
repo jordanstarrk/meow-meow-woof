@@ -53,7 +53,7 @@ $('#share-button').hover(function(){
 });
 
 $("#share-button").click(function(){
-    window.open('https://chrome.google.com/webstore/detail/new-tab-cat-video-extensi/lcpipfmjdfelofldlehfiogoogpkjiea?hl=en');
+    window.open('https://chrome.google.com/webstore/detail/lcpipfmjdfelofldlehfiogoogpkjiea');
 });
 
 //Feedback
