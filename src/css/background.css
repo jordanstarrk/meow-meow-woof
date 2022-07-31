@@ -148,18 +148,17 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 15px;
-
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
 }
 
 #share-button {
-  right: 253px;
+  right: 210px;
 }
 
-#shop {
-  right: 165px;
+#support-button {
+  right: 105px;
 }
 
 #feedback-button {
@@ -181,4 +180,3 @@ html, body {
 .close_hover {
   cursor: pointer;
 }
-

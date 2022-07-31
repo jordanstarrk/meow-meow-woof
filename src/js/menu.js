@@ -67,12 +67,12 @@ $("#feedback-button").click(function(){
 
 
 //Donate
-$('#shop').hover(function(){
+$('#support-button').hover(function(){
     $(this).toggleClass('forum_hover');
 });
 
-$("#shop").click(function(){
-    window.open('https://teespring.com/meow-meow-woof?pid=972&utm_source=mmw&utm_medium=button&utm_campaign=inapp');
+$("#support-button").click(function(){
+    window.open('https://www.buymeacoffee.com/meow.meow.woof');
 });
 
 //Close button
@@ -84,5 +84,3 @@ $("#closeIcon").click(function(){
     updateLocalStorageWithCategorySelection();
     $(".menu").hide();
 });
-
-
