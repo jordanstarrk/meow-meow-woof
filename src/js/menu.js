@@ -7,7 +7,7 @@ $('.homeButton').hover(function(){
 $(".homeButton").click(function(){
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         var active = tabs[0].id;
-        chrome.tabs.update(active, { url: "chrome-search://local-ntp/local-ntp.html" }, function() { });
+        chrome.tabs.update(active, { url: "https://www.google.com" });
     });
 });
 
