@@ -1,53 +1,43 @@
 # Meow Meow Woof
-This cat extension plays a randomized cat video everytime you open a new tab in Google Chrome. Join us and our users across 75 countries! 
 
-Download our extension in the Google Chrome Store https://chrome.google.com/webstore/detail/lcpipfmjdfelofldlehfiogoogpkjiea. Don't forget to also follow us on Instagram for more cat and kitten content @meow_meow_w00f
+Replace Chrome’s New Tab page with randomized cat (and dog) videos. **No ads.**
 
-## Getting Started
+## Install
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/lcpipfmjdfelofldlehfiogoogpkjiea).
 
-### Prerequisites
+## Usage
 
-Google Chrome - with Developer Mode Enabled
+- Open a new tab → a video autoplays (muted + looping).
+- Use the in-page menu to choose **cats**, **dogs**, **cats + dogs**, or **disable**.
+- If you’re offline, you’ll see an offline fallback.
 
-```
-1.Open Chrome.
-2.Click the Options button.
-3.Click Settings.
-4.Click "About Chrome OS."
-5.Click "More info."
-6.Click "Change channel."
-7.Select Developer - unstable. Click Change channel. Chrome OS will now download the Developer Version updates.
-8.Click Restart.
-```
+## Privacy
 
-### Installing
+- No account / sign-in.
+- No ads.
+- No analytics SDKs or event tracking implemented in this repo.
+- Saves your category selection locally in your browser.
+- Loads fonts from Google Fonts.
+- Streams videos from a CloudFront CDN when online.
 
-Load unpacked extension into Google Chrome
+## Permissions
 
-```
-1.Clone the meow meow woof repository to a folder on your local machine 
-2.In Chrome, Click the Options button.
-3.Click More Tools. 
-4.Click Extensions.
-5.Click Load Unpacked Extension
-6.Select the meow meow woof repository that you downloaded.
-7.Open a new tab in Chrome. 
-8.Grab a coffee.
-9.Enjoy Cat videos. 
-```
+- `activeTab`: used for the “Home” button (opens Google).
 
-## Contributing
+## Support
 
-If you are interested in contributing to this project, please reach out to us at meow.meow.n.w00f@gmail.com 
+- Bugs / feature requests: [GitHub issues](https://github.com/jordanstarrk/meow-meow-woof/issues)
+- Feedback form: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe5MW0-fM7FNtu3LgnYvhgDJUaMjmLUSNZsipVoUCKgtqfvRA/viewform?usp=sf_link)
 
+## Credits
 
-## Author
+Stock video sources:
 
-* Jordan Starr
+- [Pexels Videos](https://videos.pexels.com)
+- [Videezy](https://videezy.com)
+- [WeDistill](http://www.wedistill.io/)
 
+## License
 
-## Acknowledgments
-
-* Thank you https://videos.pexels.com, https://videezy.com, and http://www.wedistill.io/ for the stock videos! 
+MIT (see `LICENSE`).
