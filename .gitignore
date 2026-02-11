@@ -1,0 +1,42 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Trash / temp
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+
+# Editor/IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Chrome extension packaging / keys
+*.crx
+*.pem
+*.zip
+
+# Common build output (if added later)
+dist/
+build/
+out/
+coverage/
+node_modules/
+
