@@ -1,152 +1,170 @@
-var catsOnlyVideoList = [];
-const INSERT_VIDEO_COUNT_HERE_CATS = 99;
-const NUMBER_OF_CAT_VIDEOS = INSERT_VIDEO_COUNT_HERE_CATS + 1;
-for (var video=1; video<NUMBER_OF_CAT_VIDEOS; video++) {
-	catsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/cats/"+video+".mp4");
-};
+// ── Video Catalog ──────────────────────────────────────────────
+// Build URL lists for each category. Videos are numbered sequentially
+// on our CloudFront CDN. To add new uploads, just bump the count.
 
-var dogsOnlyVideoList = [];
-const INSERT_VIDEO_COUNT_HERE_DOGS = 65;
-const NUMBER_OF_DOG_VIDEOS = INSERT_VIDEO_COUNT_HERE_DOGS + 1;
-for (var video=1; video<NUMBER_OF_DOG_VIDEOS; video++) {
-	dogsOnlyVideoList.push("https://d9m01xi7ip4je.cloudfront.net/categories/dogs/"+video+".mp4");
-};
+const CAT_VIDEO_COUNT = 99;
+const DOG_VIDEO_COUNT = 65;
 
-var tempDisablePicture = ["src/assets/images/tempDisable.jpg"];
+const catsOnlyVideoList = [];
+for (let i = 1; i <= CAT_VIDEO_COUNT; i++) {
+  catsOnlyVideoList.push(
+    `https://d9m01xi7ip4je.cloudfront.net/categories/cats/${i}.mp4`
+  );
+}
 
-var chooseRandomVideoListBetweenDogsAndCats = function(){
-	if ((Math.floor(Math.random() * 2)) == 0){
-		return catsOnlyVideoList;
-	} else {
-		return dogsOnlyVideoList;
-	}
-};
+const dogsOnlyVideoList = [];
+for (let i = 1; i <= DOG_VIDEO_COUNT; i++) {
+  dogsOnlyVideoList.push(
+    `https://d9m01xi7ip4je.cloudfront.net/categories/dogs/${i}.mp4`
+  );
+}
 
-var getSavedUserCategoryListPreference = function(){
-	if (localStorage.getItem("category") == null) {
-		$("#dogs").css("opacity") == 0.4;
-		return catsOnlyVideoList;
-	}
-	if (localStorage.getItem("category") == "noneSelected") {
-		return tempDisablePicture;
+// Static fallback shown when the user disables both categories
+const tempDisablePicture = ["src/assets/images/tempDisable.jpg"];
 
-	} else if (localStorage.getItem("category") == "catsAndDogs"){
-		return chooseRandomVideoListBetweenDogsAndCats();
 
-	} else if (localStorage.getItem("category") == "catsOnly"){
-		return catsOnlyVideoList;
+// ── Category Helpers ───────────────────────────────────────────
 
-	} else if (localStorage.getItem("category") == "dogsOnly"){
-		return dogsOnlyVideoList;
-	}
-};
+// Coin-flip between cats and dogs for the "both" setting
+function chooseRandomCategory() {
+  return Math.random() < 0.5 ? catsOnlyVideoList : dogsOnlyVideoList;
+}
 
-var updateLocalStorageWithCategorySelection = function (){
-	if ($("#cats").css("opacity") == 1 && $("#dogs").css("opacity") == 1){
-		localStorage.setItem("category", "catsAndDogs");
-		// console.log("CATS AND DOGS");
-	}
-	if ($("#cats").css("opacity") == 0.4 && $("#dogs").css("opacity") == 0.4){
-		localStorage.setItem("category", "noneSelected");
-		// console.log("None?");
-	}
-	if ($("#cats").css("opacity") == 1 && $("#dogs").css("opacity") == 0.4){
-		localStorage.setItem("category", "catsOnly");
-		// console.log("CATS ONLY");
-	}
-	if ($("#cats").css("opacity") == 0.4 && $("#dogs").css("opacity") == 1){
-		localStorage.setItem("category", "dogsOnly");
-		// console.log("DOGS ONLY");
-	}
-};
+// Read the user's saved preference from localStorage and return
+// the matching video list. Defaults to cats-only on first visit.
+function getSavedUserCategoryListPreference() {
+  const category = localStorage.getItem("category");
 
-var getRandomNumberInChosenList = function(chosenList){
-	var numberInList = chosenList[Math.floor(Math.random() * chosenList.length)];
-	return numberInList;
-};
+  if (category === null) {
+    // First-time visitor — show cats by default, dim the dogs icon
+    document.getElementById("dogs").style.opacity = "0.4";
+    return catsOnlyVideoList;
+  }
 
-var playAVideo = function(listToPlay, numberInChosenList) {
-	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + numberInChosenList + "\"><source src=\"" + numberInChosenList + "\" type=\"video/mp4\"></video>";
-	return HtmlVideoString;
-};
+  switch (category) {
+    case "noneSelected":  return tempDisablePicture;
+    case "catsAndDogs":   return chooseRandomCategory();
+    case "catsOnly":      return catsOnlyVideoList;
+    case "dogsOnly":      return dogsOnlyVideoList;
+    default:              return catsOnlyVideoList;
+  }
+}
 
-var playAPicture = function() {
-	var HtmlVideoString = "<img src=\"assets\"images\"tempDisable.jpg\" id=\"tempDisable\">";
-	return HtmlVideoString;
-};
+// Read an element's effective opacity. We set opacity via inline
+// styles, but on first page load some elements haven't been touched
+// yet — their style.opacity is "" (empty string). The browser
+// default is 1, so we treat "" as fully visible.
+function getOpacity(el) {
+  const val = el.style.opacity;
+  return val === "" ? 1 : parseFloat(val);
+}
 
-var playOfflineVideo = function() {
-	offlineVideo = "src/assets/images/offlineCat.mp4";
-	var HtmlVideoString = "<video class=\"fullscreen-video\" loop muted autoplay poster=\"" + offlineVideo + "\"><source src=\"" + offlineVideo + "\" type=\"video/mp4\"></video>";
-	return HtmlVideoString;
-};
+// Persist category selection based on current icon opacity.
+// Opacity doubles as the visual indicator, so we read it directly
+// to keep UI and stored state in sync without extra bookkeeping.
+function updateLocalStorageWithCategorySelection() {
+  const catsOn = getOpacity(document.getElementById("cats")) === 1;
+  const dogsOn = getOpacity(document.getElementById("dogs")) === 1;
 
-var checkIfUserOnline = function(){
-	if (window.navigator.onLine == true){
-		return true;
-	} else {
-		return false;
-	}
-};
+  if (catsOn && dogsOn)        localStorage.setItem("category", "catsAndDogs");
+  else if (!catsOn && !dogsOn) localStorage.setItem("category", "noneSelected");
+  else if (catsOn && !dogsOn)  localStorage.setItem("category", "catsOnly");
+  else if (!catsOn && dogsOn)  localStorage.setItem("category", "dogsOnly");
+}
 
-var keepStateForMenuSelection = function(){
-	if (localStorage.getItem("category") == "catsOnly"){
-		$("#cats").css("opacity", 1);
-		$("#dogs").css("opacity", 0.4);
-	}
 
-	if (localStorage.getItem("category") == "dogsOnly"){
-		$("#cats").css("opacity", 0.4);
-		$("#dogs").css("opacity", 1);
-	}
+// ── Video / Image Rendering ────────────────────────────────────
 
-	if (localStorage.getItem("category") == "noneSelected"){
-		$("#cats").css("opacity", 0.4);
-		$("#dogs").css("opacity", 0.4);
-	}
+function getRandomItem(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
 
-	if (localStorage.getItem("category") == "catsAndDogs"){
-		$("#cats").css("opacity", 1);
-		$("#dogs").css("opacity", 1);
-	}
+// Build an autoplay video element — muted + looping so the tab
+// feels alive without surprising the user with audio
+function buildVideoHTML(videoUrl) {
+  return (
+    `<video class="fullscreen-video" loop muted autoplay poster="${videoUrl}">` +
+    `<source src="${videoUrl}" type="video/mp4"></video>`
+  );
+}
 
-	if (localStorage.getItem("category") == null){
-		$("#dogs").css("opacity", 0.4);
-	}
-};
+// Static image for the "disabled" state
+function buildDisabledHTML() {
+  return '<img src="src/assets/images/tempDisable.jpg" id="tempDisable">';
+}
 
-var run = function(){
-	listToPlay = getSavedUserCategoryListPreference();
-	if (checkIfUserOnline() == true && getSavedUserCategoryListPreference() == "tempDisablePicture"){
-		document.getElementById("arrayString").innerHTML=playAPicture();
-		keepStateForMenuSelection();
+// Bundled fallback video so there's still something to watch offline
+function buildOfflineHTML() {
+  const offlineVideo = "src/assets/images/offlineCat.mp4";
+  return (
+    `<video class="fullscreen-video" loop muted autoplay poster="${offlineVideo}">` +
+    `<source src="${offlineVideo}" type="video/mp4"></video>`
+  );
+}
 
-	} else if (checkIfUserOnline() == true){
-		numberInListToPlay = getRandomNumberInChosenList(listToPlay);
-		document.getElementById("arrayString").innerHTML=playAVideo(listToPlay, numberInListToPlay);
-		keepStateForMenuSelection();
-	}
-	else {
-		document.getElementById("arrayString").innerHTML=playOfflineVideo();
-	};
-};
 
-// Run main function. Try...Catch to prevent extension from running when on a non-new tab page.
+// ── Menu State ─────────────────────────────────────────────────
+// Restore icon opacity to match the saved category so the menu
+// always looks correct when the user opens it.
+
+function keepStateForMenuSelection() {
+  const cats = document.getElementById("cats");
+  const dogs = document.getElementById("dogs");
+  const category = localStorage.getItem("category");
+
+  switch (category) {
+    case "catsOnly":
+      cats.style.opacity = "1";
+      dogs.style.opacity = "0.4";
+      break;
+    case "dogsOnly":
+      cats.style.opacity = "0.4";
+      dogs.style.opacity = "1";
+      break;
+    case "noneSelected":
+      cats.style.opacity = "0.4";
+      dogs.style.opacity = "0.4";
+      break;
+    case "catsAndDogs":
+      cats.style.opacity = "1";
+      dogs.style.opacity = "1";
+      break;
+    default:
+      // First visit — explicitly set both so getOpacity() always
+      // has a value to read (cats on, dogs dimmed)
+      cats.style.opacity = "1";
+      dogs.style.opacity = "0.4";
+      break;
+  }
+}
+
+
+// ── Main ───────────────────────────────────────────────────────
+
+function run() {
+  const listToPlay = getSavedUserCategoryListPreference();
+  const output = document.getElementById("arrayString");
+
+  if (navigator.onLine && listToPlay === tempDisablePicture) {
+    // Both categories disabled — show a static placeholder image
+    output.innerHTML = buildDisabledHTML();
+    keepStateForMenuSelection();
+
+  } else if (navigator.onLine) {
+    const videoUrl = getRandomItem(listToPlay);
+    output.innerHTML = buildVideoHTML(videoUrl);
+    keepStateForMenuSelection();
+
+  } else {
+    // No internet — fall back to the bundled offline cat video
+    output.innerHTML = buildOfflineHTML();
+  }
+}
+
+// Safety net try/catch — shouldn't be needed now that content_scripts
+// is removed, but doesn't hurt to keep as a guard
 try {
-	run();
+  run();
+} catch (error) {
+  // Silently ignore — nothing to render
 }
-catch (error) {
-	// do nothing when user is not on new tab page
-}
-
-
-/*********************************************
-Redirect users to a feedback form on uninstall
-**********************************************/
-try {
-	chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSeykxJbhQckDZ1j3WU3D8Onr06uliiABdhtc1aIW6mxjzBCfQ/viewform?usp=sf_link');
-}
-catch (error) {
-	// do nothing when user is not on new tab page 
-}
-

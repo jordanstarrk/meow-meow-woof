@@ -1,41 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-      <title>new tab</title>
-      <meta charset="UTF-8" />
-      <meta name="description" content="Art">
-      <meta name="author" content="meow meow woof">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/src/css/background.css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <meta name="description" content="Meow Meow Woof — random cat and dog videos on every new tab">
+    <meta name="author" content="Meow Meow Woof">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/background.css">
+    <!-- Roboto 100 for display text, 300 for UI labels -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="fullscreen-video"></div>
     <div id="arrayString"></div>
     <div class="homeButton" id="home-button">
-      <img src="src/assets/icons/home.svg">
+      <img src="src/assets/icons/home.svg" alt="Home">
     </div>
     <div class="menuButton">Meow?</div>
 
-      <div class="menu">
-        <div id="selectCategoryHeader">Select your categories</div>
-        <img id="closeIcon" src="src/assets/icons/close_24px.svg" width="20px">
-        <div id="cats" class="category">
-          <img src="src/assets/icons/catsCategories.svg" alt="Cats" id='cat'>
-        </div>
-        <div id="dogs" class="category">
-          <img src="src/assets/icons/dogsCategories.svg" alt="Dogs" id='dog'>
-        </div>
-
-        <div id="toggle-button"></div>
-
-        <div>
-          <div class="buttons" id="share-button">Share</div>
-          <div class="buttons" id="support-button">Support Us</div>
-          <div class="buttons" id="feedback-button">Feedback</div>
-        </div>
+    <div class="menu">
+      <div id="selectCategoryHeader">Select your categories</div>
+      <img id="closeIcon" src="src/assets/icons/close_24px.svg" width="20px" alt="Close">
+      <div id="cats" class="category">
+        <img src="src/assets/icons/catsCategories.svg" alt="Cats" id="cat">
       </div>
-    <script src="src/js/jquery.min.js"></script>
+      <div id="dogs" class="category">
+        <img src="src/assets/icons/dogsCategories.svg" alt="Dogs" id="dog">
+      </div>
+
+      <div id="toggle-button"></div>
+
+      <div>
+        <div class="buttons" id="share-button">Rate Us</div>
+        <div class="buttons" id="support-button">Support Us</div>
+        <div class="buttons" id="feedback-button">Feedback</div>
+      </div>
+    </div>
+
+    <!-- App scripts — vanilla JS, no external dependencies -->
     <script src="src/js/app.js"></script>
     <script src="src/js/menu.js"></script>
 </body>
